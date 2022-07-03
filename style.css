@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100;1,200;1,300;1,400;1,500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(5,85,171,1) 49%, rgba(5,93,176,1) 67%, rgba(5,102,182,1) 75%, rgba(0,212,255,1) 89%);
+}
+
+.clip-bg {
+  background-image: url(./images/bg.jpg);
+  height: 100vh;
+  clip-path: polygon(100% 0, 100% 61%, 0 100%, 1% 40%);
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.clip-bg::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  position: absolute;
+  opacity: 0.3;
+}
+
+.clip-bg h1 {
+  font-size: 6rem;
+  color: white;
+  z-index: 1;
+}
+
+.clip-bg button {
+  position: absolute;
+  z-index: 1;
+  top: 65%;
+  left: 20%;
+  padding: 1rem 3.6rem;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-size: 1.4rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.clip-bg button:hover {
+  background-color: white;
+  color: rgb(57, 120, 202);
+}
+
+header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+}
+
+header h3 {
+  font-size: 1.5rem;
+  margin-left: 1.3rem;
+  color: white;
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 60%;
+  }
+}
